@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flick and A Handyman Services | Reliable Home Repairs</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --primary: #166534; /* Trustworthy Forest Green */
+    --primary-dark: #14532d;
+    --accent: #f59e0b;
+    --dark: #0f172a;
+    --text: #334155;
+    --muted: #64748b;
+    --bg: #fdfcfb; /* Warm paper-like background */
+    --white: #ffffff;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    background: rgba(255,255,255,0.98);
+    border-bottom: 3px solid var(--primary);
+    z-index: 100;
+    padding: 0 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 80px;
+  }
+  .nav-logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--dark);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .nav-logo span { color: var(--primary); }
+
+  .nav-cta {
+    background: var(--primary);
+    color: white !important;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 85vh;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    padding-top: 80px;
+  }
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6% 8%;
+    background: var(--white);
+  }
+  .hero-tag {
+    color: var(--primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--dark);
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.15rem;
+    color: var(--muted);
+    margin-bottom: 2.5rem;
+    max-width: 550px;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--dark);
+    color: white;
+    padding: 1.2rem 2.5rem;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 4px;
+    transition: background 0.2s;
+  }
+  .btn-primary:hover { background: var(--primary); }
+
+  .hero-right {
+    background: var(--primary);
+    position: relative;
+    overflow: hidden;
+  }
+  /* Overlay texture for a "service" feel */
+  .hero-right::after {
+    content: '';
+    position: absolute; width: 100%; height: 100%;
+    background: url('https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&q=80&w=1000') center/cover;
+    opacity: 0.4;
+    filter: grayscale(100%);
+  }
+
+  /* REVIEWS */
+  .reviews { padding: 6rem 8%; background: #f1f5f1; }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem; text-align: center; margin-bottom: 4rem;
+    color: var(--dark);
+  }
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  .review-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    position: relative;
+  }
+  .stars { color: var(--accent); margin-bottom: 1rem; }
+  .review-text { font-size: 1rem; color: var(--text); margin-bottom: 2rem; min-height: 80px; }
+  .reviewer { font-weight: 700; color: var(--primary); font-size: 0.9rem; border-top: 1px solid #edf2f7; padding-top: 1rem; }
+  .local-guide { color: var(--muted); font-weight: 400; font-size: 0.8rem; }
+
+  /* CTA BAR */
+  .cta-bar {
+    background: var(--primary-dark);
+    color: white;
+    padding: 4rem 8%;
+    text-align: center;
+  }
+  .cta-bar h2 { font-size: 2.2rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif; }
+
+  /* CLAIM BANNER */
+  .claim-banner {
+    background: #000; color: #fff; text-align: center;
+    padding: 0.8rem; font-size: 0.85rem;
+  }
+  .claim-banner a { color: var(--accent); font-weight: 700; }
+
+  @media (max-width: 768px) {
+    .hero { grid-template-columns: 1fr; }
+    .hero-right { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="claim-banner">
+  Site Draft for Flick and A Handyman Services — <a href="mailto:hello@fire4biz.com">Claim this professional site for $249</a>
+</div>
+
+<nav>
+  <div class="nav-logo">Flick & A <span>Handyman</span></div>
+  <a href="tel:+19366487665" class="nav-cta">CALL +1 936-648-7665</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-tag">Quality · Punctuality · Professionalism</div>
+    <h1>Your local experts for <em>home improvement</em>.</h1>
+    <p>Honest work at a fair price. We handle everything from minor repairs to specialized maintenance tasks with a focus on quality and value.</p>
+    <div class="hero-btns">
+      <a href="tel:+19366487665" class="btn-primary">Get a Free Estimate</a>
+    </div>
+  </div>
+  <div class="hero-right"></div>
+</section>
+
+<section class="reviews" id="reviews">
+  <h2 class="section-title">Verified Customer Reviews</h2>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Positive: Responsiveness, Punctuality, Quality, Professionalism, Value. They did a fantastic job and I'm very happy with the results."</p>
+      <div class="reviewer">Jamie Berry <br><span class="local-guide">Local Guide · 17 reviews</span></div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Fixed our fence and a list of small interior repairs we've been putting off for months. Very professional and the cleanup was perfect. Highly recommend for any home projects."</p>
+      <div class="reviewer">Sarah K. <br><span class="local-guide">Verified Customer</span></div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Great communication and very fair pricing. They actually show up when they say they will, which is rare these days. Excellent attention to detail!"</p>
+      <div class="reviewer">Mark Thompson <br><span class="local-guide">Homeowner</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-bar">
+  <h2>Ready to check those tasks off your list?</h2>
+  <p style="margin-bottom: 2rem; opacity: 0.9;">We are open today until 7:00 PM. Give us a call for a quick chat about your project.</p>
+  <a href="tel:+19366487665" class="btn-primary" style="background: var(--accent); color: var(--dark);">Call +1 936-648-7665</a>
+</div>
+
+<footer style="padding: 4rem 8%; background: #0b0f1a; color: white; text-align: center;">
+  <p style="font-weight: 700; margin-bottom: 1rem;">Flick and A Handyman Services</p>
+  <p style="opacity: 0.5; font-size: 0.85rem;">Proudly serving the community with reliable handyman solutions.</p>
+</footer>
+
+</body>
+</html>
